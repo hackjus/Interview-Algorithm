@@ -11,6 +11,7 @@ public class zigzagLevelOrder_103 {
         List<List<Integer>> res=new ArrayList<>();
         if(root==null) return res;
         queue.offer(root);
+        int index=0;
         while (!queue.isEmpty()){
             int size=queue.size();
             List<Integer> temp=new ArrayList<>();
@@ -22,10 +23,15 @@ public class zigzagLevelOrder_103 {
                 if(current.right!=null){
                     queue.offer(current.right);
                 }
-                temp.add(0,current.val);
+                if(index%2==1){
+                    temp.add(0,current.val);
+                }else{
+                    temp.add(current.val);
+                }
                 size--;
             }
             res.add(temp);
+            index++;
         }
         return  res;
     }
