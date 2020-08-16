@@ -1,4 +1,4 @@
-package go;
+package leetcode;
 
 public class Lab {
     public String name;

@@ -1,4 +1,4 @@
-package go;
+package leetcode;
 //统计字符串的个数
 
 import java.util.ArrayList;
