@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.DP;
 /*环状；第一个房屋与最后一个房屋是相邻的；意味找不能偷第一个；然后再偷最后一个*/
 public class DP_robII_213 {
     int rob(int[]nums){

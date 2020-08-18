@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.DP;
 /*
 nums = [1, 2, 3]
 target = 4

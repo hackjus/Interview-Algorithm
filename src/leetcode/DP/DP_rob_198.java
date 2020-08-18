@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.DP;
  /*不能偷相邻的；dp
  * dp[i]=(dp[i-2]+arr[i],d[[i-1]);小偷可以选择偷或者不偷；
  * */

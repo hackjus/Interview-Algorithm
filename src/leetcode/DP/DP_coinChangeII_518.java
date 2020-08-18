@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.util.Scanner;
+package leetcode.DP;
 
 /*输入: amount = 5, coins = [1, 2, 5]
 输出: 4
