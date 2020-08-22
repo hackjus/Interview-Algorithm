@@ -24,7 +24,7 @@ public class Main1 {
         visited[0][0]=true;
         res.add(arr[0][0]);
         for(int i=0;i<m*n-1;i++){
-            res.add
+
              if(r1>=0&&r1<m&&c1>=0&&c1<m&&!visited[r1][c1]){
                  res.add(arr[r1][c1]);
                  visited[r1][c1]=true;
