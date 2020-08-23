@@ -1,5 +1,7 @@
 package leetcode.Tree;
 
+import java.util.Stack;
+
 public class Main {
     boolean isSymmetrical(TreeNode pRoot) {
         if (pRoot == null)
@@ -50,4 +52,44 @@ public class Main {
         }
         return root;
     }
+
+    private  TreeNode ret;
+    private  int cnt=0;
+    TreeNode KthNode(TreeNode pRoot, int k){
+        inorder(pRoot,k);
+        return ret;
+    }
+
+    private void inorder(TreeNode root, int k) {
+        if(root==null||cnt>=k){
+            return;
+        }
+        inorder(root.left, k);
+        cnt++;
+        if(cnt==k){
+            ret=root;
+        }
+        inorder(root.right,k);
+    }
+    TreeNode kthNode(TreeNode root,int k) {
+        Stack<TreeNode> stack = new Stack<>();
+        int cnt = 0;
+        while (!stack.isEmpty()&&root!=null) {
+            if (root!= null) {
+                stack.push(root);
+                root = root.left;
+            }else{
+                TreeNode root1 = stack.pop();
+                cnt++;
+                if (cnt == k) {
+                    return root1;
+                }
+                root=root1.right;
+            }
+
+
+        }
+        return new TreeNode(-1);
+    }
+
 }

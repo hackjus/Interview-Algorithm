@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.DFS;
 
 public class DFS_maxAreaIsland_695 {
 /*[[0,0,1,0,0,0,0,1,0,0,0,0,0],
