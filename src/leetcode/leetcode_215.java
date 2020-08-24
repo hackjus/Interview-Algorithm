@@ -40,6 +40,7 @@ public class leetcode_215 {
                 // 小于 pivot 的元素都被交换到前面
                 j++;
                 swap(nums, j, i);
+//                j++;
             }
         }
         // 在之前遍历的过程中，满足 [left + 1, j] < pivot，并且 (j, i] >= pivot
@@ -56,7 +57,7 @@ public class leetcode_215 {
 
   public static void main(String[] args) {
     leetcode_215 one=new leetcode_215();
-    int []arr={3,2,1,5,6,4};
+    int []arr={5,4,6,1};
     int k=one.findKthLargest(arr,2);
     System.out.println(k);
   }
