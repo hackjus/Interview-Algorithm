@@ -1,6 +1,6 @@
 package leetcode.DP;
 
-public class 跳跃游戏II {
+public class jumpGameII {
         public int jump(int[] nums) {
             int length = nums.length;
             int end = 0;
@@ -18,7 +18,7 @@ public class 跳跃游戏II {
 
     public static void main(String[] args) {
         int[]arr={2,3,1,2,4,2,3};
-        new 跳跃游戏II().jump(arr);
+        new jumpGameII().jump(arr);
     }
 
 }

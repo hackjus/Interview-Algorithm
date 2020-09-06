@@ -48,7 +48,7 @@ public class Main {
                maxCarry=Math.max((arr[i]+arr[i+1]),maxCarry);
            }
             System.out.print(maxCost+" "+maxCarry);
-        }111
+        }
 
 
     }

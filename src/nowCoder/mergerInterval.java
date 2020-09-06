@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 
-public class 合并区间 {
+public class mergerInterval {
     /*
     * 思路：安装第一个字段排序；然后合并的前提是当前第二个比next个元素的第一个大于；才能合并；然后第二层循环判断；如果大于；继续i++;
     *

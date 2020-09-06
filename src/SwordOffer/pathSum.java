@@ -12,7 +12,7 @@ import java.util.ArrayList;
     }
 
 }
-public class path之和为某一值的路径 {
+public class pathSum {
 
     private ArrayList<ArrayList<Integer>> listAll = new ArrayList<ArrayList<Integer>>();
     private ArrayList<Integer> list = new ArrayList<Integer>();
