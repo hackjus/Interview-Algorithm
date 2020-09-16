@@ -1,38 +1,29 @@
 package leetcode.Array;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
+import java.util.Stack;
 
 public class Main {
-    public static int get1(int n) {
-        int count = 0;
-        while (n != 0) {
-            n &= (n - 1);
-            count++;
-        }
-        return count;
-    }
+
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String s = br.readLine();
-
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        in.nextLine();
-
-        for (int i = 0; i < n; i++) {
-            Set<Integer> set = new HashSet<>();
-            int n1 = in.nextInt();
-            int[] arr = new int[n1];
-            for (int j = 0; j < n1; j++) {
-                set.add(get1(in.nextInt()));
+        String s = in.nextLine();
+        Stack<String> stack = new Stack();
+        StringBuffer sb = new StringBuffer();
+        int i = 0;
+        while (i < s.length()) {
+            int cnt = 0;
+            int j = i;
+            while (j < s.length() && s.charAt(j) == s.charAt(i)) {
+                j++;
+                cnt++;
             }
-            System.out.println(set.size());
+            sb.append(s.charAt(i));
+            sb.append(cnt);
+            i = j;
         }
+        System.out.println(sb);
     }
 }
