@@ -1,45 +1,36 @@
 package baidu;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main7 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        Map<String, String> map = new HashMap<>();
-        map.put("A", "V");
-        map.put("B", "W");
-        map.put("C", "X");
-        map.put("D", "Y");
-        map.put("E", "Z");
-        map.put("F", "A");
-        map.put("G", "B");
-        map.put("H", "C");
-        map.put("I", "D");
-        map.put("J", "E");
-        map.put("K", "F");
-        map.put("L", "G");
-        map.put("M", "H");
-        map.put("N", "I");
-        map.put("O", "J");
-        map.put("P", "K");
-        map.put("Q", "L");
-        map.put("R", "M");
-        map.put("S", "N");
-        map.put("T", "O");
-        map.put("U", "P");
-        map.put("V", "Q");
-        map.put("W", "R");
-        map.put("X", "S");
-        map.put("Y", "T");
-        map.put("Z", "U");
-        while (in.hasNext()) {
-            String s = in.nextLine();
-            if (s.equals("START")) {
-                String s = in.nextLine()
-            }
+        String s = in.nextLine();
+        String s1[] = s.split("]");
+        int target = Integer.parseInt(s1[1].substring(1, 2));
+        String s2 = s1[0].substring(1, s1[0].length());
+        String s3[] = s2.split(",");
+        int[] arr = new int[s3.length];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(s3[i]);
         }
 
+        System.out.println(bineary(arr, target));
+    }
+
+    public static int bineary(int[] arr, int target) {
+        int i = 0;
+        int j = arr.length - 1;
+        while (i <= j) {
+            int pivot = (i + j) / 2;
+            if (arr[pivot] == target) {
+                return pivot;
+            } else if (arr[pivot] > target) {
+                j = pivot - 1;
+            } else {
+                i = pivot + 1;
+            }
+        }
+        return -1;
     }
 }
